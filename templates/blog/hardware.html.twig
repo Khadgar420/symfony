@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+
+
+
+   
+ 
+    
+<div class="row">
+  <div class="col" id="col1">
+
+ {%for article in articles %}
+
+{% if article.category.title == 'Hardware' %}
+    <article>
+      <h2>{{article.title}}</h2>
+      <div class="metadata">Ecrit le {{article.createdAt | date('d/m/Y')}} à {{article.createdAt | date('H:i')}}</div>
+      <div class="content">
+        <img src="{{article.image}}" alt="">
+        <br>
+       {% set strategy = 'html' %}
+
+{% autoescape 'html' %}
+    {{ article.content|escape('html')}} 
+{% endautoescape %}
+        <br>
+        <br>
+        <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn btn-danger">Lire la suite</a>
+      </div>
+    </article>
+    {% endif %}
+    
+{% endfor %}
+</div>
+ 
+  
+
+
+</div>
+
+
+
+
+        
+    
+  </div>
+
+
+  
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+easy_admin:
+    entities:
+        Utilisateurs:
+            class: App\Entity\User
+            form:
+                fields: ['email', 'username']
+        Article:
+            class: App\Entity\Article
+            form:
+                fields: ['title', 'content','createdAt','category','image']        
+                  
+
+                site_name: 'Le Pad Pourpre'
+        Comment:
+            class: App\Entity\Comment
+
+
+
+    

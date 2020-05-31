@@ -1,0 +1,289 @@
+.navbar {
+    background-color: black !important;
+}
+
+#testusflask {
+    color: red;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.navbar a {
+    color: red;
+}
+
+#logosite {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    display: block;
+    margin: auto;
+}
+
+#title {
+    width: 180px;
+    margin: auto;
+    display: block;
+    color: red;
+    text-align: center;
+}
+
+#container1 {
+    background: black;
+}
+
+#col1 {
+    background: #5e5e5e;
+}
+
+#col2 {
+    background: #3a3a3a;
+}
+
+article,
+article p,
+article a {
+    background: #3a3a3a;
+    color: red;
+}
+
+h1 {
+    color: red !important;
+    font-family: 'Permanent Marker', cursive;
+}
+
+label {
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-group {
+    color: red;
+}
+
+article {
+    border-radius: 20px;
+    background: #3a3a3a;
+    padding: 20px;
+    margin: 10px;
+}
+
+#containerfooter {
+    background-color: black !important;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#containerfooter a,
+#containerfooter h1 {
+    margin: auto;
+    color: red;
+}
+
+body {
+    background-image: url(../images/fond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.row {
+    background: #5e5e5e;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item img {
+    height: 50vh;
+    width: 100%;
+}
+
+#welcome {
+    color: red;
+}
+
+.btn-link {
+    color: red !important;
+}
+
+.card-header {
+    background: #3a3a3a !important;
+}
+
+.card-body {
+    background: #5e5e5e;
+    color: white;
+}
+
+.card {
+    border: none !important;
+}
+
+#title,
+.card-title {
+    font-family: 'Permanent Marker', cursive;
+    width: auto;
+    color: red;
+}
+
+#welcome {
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 30px;
+}
+
+.jumbotron {
+    background: #5e5e5e !important;
+}
+
+p {
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+}
+
+.card-image {
+    width: 250px;
+    height: 150px;
+}
+
+#cards {
+    opacity: 0;
+}
+
+#welcome {
+    margin: auto;
+    text-align: center;
+    text-shadow: 0 0 3vw #F40A35;
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+}
+
+.card-text {
+    font-family: 'Oswald', sans-serif;
+}
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 2vw #FA1C16, 0 0 5vw #FA1C16, 0 0 5vw #FA1C16, 0 0 .4vw rgb(254, 65, 40), .5vw .2vw .1vw #801414;
+        color: rgb(255, 153, 0);
+    }
+    50% {
+        text-shadow: 0 0 .2vw #800E0B, 0 0 .5vw #800E0B, 0 0 2vw #800E0B, 0 0 2vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw rgb(64, 10, 10);
+        color: #ff0000;
+    }
+}
+
+#shutdown {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+#hidenavtitle {
+    font-family: 'Permanent Marker', cursive;
+    width: auto;
+    color: red;
+}
+
+#hidenav a {
+    color: red;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.collapse a {
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .cards {
+        flex-direction: column;
+    }
+    .nav-item.nul {
+        opacity: 0;
+    }
+    .content img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cards {
+        flex-direction: column;
+        margin: auto;
+    }
+    .nav-item.nul {
+        opacity: 0;
+    }
+    .content img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .nav-item.nul {
+        opacity: 0;
+    }
+}
+
+.nul {
+    display: inline-block;
+    margin-left: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn {
+    background: red;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    border: red;
+    margin-bottom: 20px;
+}
+
+.btn:active {
+    background: greenyellow;
+    transition-duration: 200ms;
+}
+
+.comment {
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.col-3 small,
+.col-3 p {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+}
+
+#connexion {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#connexion:hover {
+    color: white;
+    transition-duration: 500ms;
+}
+
+#comcon {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+}

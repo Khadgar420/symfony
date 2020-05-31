@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+
+
+<h1 class="mx-auto">Inscription</h1>
+
+{{ form_start(form) }}
+{{form_row(form.username, {'label':'Nom d\'utilisateur','attr':{'placeholder' : 'Pseudo entre 3 et 14 caractères ( pas de caractères spéciaux).'}})}}
+{{form_row(form.email, {'label':'Adresse Email','attr':{'placeholder' : 'Adresse Mail'}})}}
+{{form_row(form.password, {'label':'Mot de passe','attr':{'placeholder' : 'Entre 8 et 16 caractères, lettres et chiffres seulement.'}})}}
+{{form_row(form.confirm_password, {'label':'Confirmation du mot de passe','attr':{'placeholder' : 'Répétez le mot de passe'}})}}
+
+<button type="submit" class="btn btn-success">Inscription</button>
+{{form_end(form)}}
+
+</div>
+
+{% endblock %}
