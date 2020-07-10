@@ -7,71 +7,94 @@
 
  
     
-<div class="row">
-  <div class="col" id="col1">
 
-<article>
-  <h2>{{article.title}}</h2>
-  <div class="metadata">Ecrit le {{article.createdAt | date('d/m/Y')}} à {{article.createdAt | date('H:i')}} dans la catégorie {{ article.category.title }}</div>
-  <div class="content">
-  
-    <img src="{{article.image}}" alt="">
-    <br>
-      {% set strategy = 'html' %}
 
-{% autoescape 'html' %}
-    {{ article.content|escape('html')}} 
-{% endautoescape %}
-<br>
- 
-         {% if is_granted('ROLE_ADMIN') %}
+<div class="container-md">
+
+        <div class="articleshow">
+            <div class="ArticleTitle col-12">
+                {{article.title}}
+            </div>
+
+
+
+        </div>
+        <div class="col-xl">
+            <img src="{{article.image}}" alt="">
+            <br>
+            <br>
+            <br>
+
+            {% set strategy = 'html' %}
+
+            {% autoescape 'html' %}
+    
+
+            <p id="contenu-article">{{ article.content|escape('html')}} </p>
+            <br>
+            <br>
+            <br>
+
+          {% endautoescape %}
+            <p id="info-article">Ecrit le {{article.createdAt | date('d/m/Y')}} à {{article.createdAt | date('H:i')}} dans la catégorie {{ article.category.title }}</p>
+
+        </div>
+
+        {% if is_granted('ROLE_ADMIN') %}
 <a href="{{ path('blog_edit', {'id': article.id}) }}" class="btn btn-danger">Edit</a>
         {% endif %}
-  </div>
-</article>
 
-<section id="commentaires">
-<h1>{{ article.comments | length }} Commentaires</h1>
-{% for comment in article.comments %} 
+        <div class="comments">
+            <div class="ArticleCommentaire">
+              {{ article.comments | length }}  Commentaires
+            </div>
 
-<div id="comment">
-<div class="row comment">
-<div class="col-3"><p class="commentp">
-{{comment.author}}</p> (<small>{{comment.createdAt | date('d/m/Y à H:i')}}</small>)
-</div>
-<div class="col">
-<p class="commentp">
- {% set strategy = 'html' %}
+            {% for comment in article.comments %} 
+            <div class="col-12 comment">
+                <div class="userinfo">
+                    <a href="cdv" id="comslide"><img src="./img/logodusite.png" id="avatarcom" alt="imgcdv"></a>
+                    <p>{{comment.author}} (<small>{{comment.createdAt | date('d/m/Y à H:i')}}</small>)</p>
+
+                </div>
+                     {% set strategy = 'html' %}
 
 {% autoescape 'html' %}
-    {{ comment.content|escape('html')}} 
-{% endautoescape %}
-<p>
-</div>
-</div>
-</div>
-{% endfor %}
 
-</section>
+                    <div class="lecommentaire">
+                        <br>
+                        <br>
+                        <p id="paragraph"> {{ comment.content|escape('html')}} </p>
 
-{% if app.user %}
+
+                    </div>
+
+                    {% endautoescape %}
+            </div>
+            <br>
+        <br>
+        </div>
+        
+  
+
+    {% endfor %}
+
+    {% if app.user %}
 {{form_start(commentForm)}}
-{{form_row(commentForm.author,{ 'attr': {'placeholder':'Auteur'}})}}
-{{form_row(commentForm.content,{ 'attr': {'placeholder':'Restez courtois'}})}}
-<button type="submit" class="btn btn-success">Commenter</button>
+
+
+<div class="col-6 form">{{form_row(commentForm.content,{ 'attr': {'placeholder':'Restez courtois'}})}}</div>
+<div class="col-6 form"><button type="submit" class="btn btn-success">Commenter</button></div>
+<br>
+<br>
+<br>
 {{form_end(commentForm)}}
 {% else %}
 <h2 id="comcon">Connectez vous pour commenter ! </h2>
 <a href="{{path('security_login')}}" class="btn btn-primary">Connectez vous</a>
 {% endif %}
+
+  </div>
 </div>
- 
-  
-
-
-</div>
-
-
 
 
         

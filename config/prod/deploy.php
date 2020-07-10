@@ -10,9 +10,9 @@ return new class extends DefaultDeployer
             // SSH connection string to connect to the remote server (format: user@host-or-IP:port-number)
             ->server('beab1214@aiguillette.o2switch.net')
             // the absolute path of the remote server directory where the project is deployed
-            ->deployDir('/var/www/vhosts/symfony-demo')
+            ->deployDir('home/beab1214/public_html')
             // the URL of the Git repository where the project code is hosted
-            ->repositoryUrl('https://github.com/symfony/symfony-demo')
+            ->repositoryUrl('git@github.com:Khadgar420/symfony.git')
             // the repository branch to deploy
             ->repositoryBranch('master')
         ;

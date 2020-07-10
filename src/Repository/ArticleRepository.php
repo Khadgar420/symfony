@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Article;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * @method Article|null find($id, $lockMode = null, $lockVersion = null)
@@ -18,6 +19,24 @@ class ArticleRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Article::class);
     }
+
+    public function findLast5()
+    {
+        $queryBuilder = $this->createQueryBuilder("a")
+            ->orderBy("a.id","desc")
+            ->setMaxResults(5)
+        ;
+        return $queryBuilder->getQuery()->getResult();    
+    }
+
+    public function getArticleCount(){
+
+        $queryBuilder=$this->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ;
+
+            return $queryBuilder->getQuery()->getSingleScalarResult();
+        }
 
     // /**
     //  * @return Article[] Returns an array of Article objects

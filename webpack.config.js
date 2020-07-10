@@ -28,10 +28,14 @@ Encore
     .addEntry('main', './assets/js/main.js')
     .addEntry('bootstrapjs', './assets/js/bootstrap.min.js')
     .addEntry('cookies', './assets/js/cookie_consent.js')
+    .addEntry('anim0', './assets/js/script.js')
+    .addEntry('anim1', './assets/js/script2.js')
 
 .addStyleEntry('home', './assets/css/home.css')
     .addStyleEntry('test', './assets/css/test.css')
     .addStyleEntry('cookiesscss', './assets/css/cookie_consent.scss')
+
+.addStyleEntry('style', './assets/css/style.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

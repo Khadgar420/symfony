@@ -2,19 +2,66 @@
 
 {% block body %}
 
-<div class="row">
+<div class="container-md">
+<br>
+<br>
+<br>
+<br>
 
 
-<h1 class="mx-auto">Inscription</h1>
+<div class="col-6 form">
+<h2 class="mx-auto">Inscription</h2>
+</div>
+
 
 {{ form_start(form) }}
+
+<div class="col-6 form">
 {{form_row(form.username, {'label':'Nom d\'utilisateur','attr':{'placeholder' : 'Pseudo entre 3 et 14 caractères ( pas de caractères spéciaux).'}})}}
+
+</div>
+
+<div class="col-6 form">
+
 {{form_row(form.email, {'label':'Adresse Email','attr':{'placeholder' : 'Adresse Mail'}})}}
+
+
+</div>
+
+<div class="col-6 form">
 {{form_row(form.password, {'label':'Mot de passe','attr':{'placeholder' : 'Entre 8 et 16 caractères, lettres et chiffres seulement.'}})}}
+</div>
+
+<div class="col-6 form">
+
 {{form_row(form.confirm_password, {'label':'Confirmation du mot de passe','attr':{'placeholder' : 'Répétez le mot de passe'}})}}
+</div>
+<div class="col-6 form">
 
 <button type="submit" class="btn btn-success">Inscription</button>
+</div>
 {{form_end(form)}}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </div>
 

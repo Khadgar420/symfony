@@ -19,6 +19,17 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+
+    public function getUsername(){
+
+        $queryBuilder=$this->createQueryBuilder('u')
+            ->select('u.username')
+            ;
+
+            return $queryBuilder->getQuery()->getResult();
+        }
+
+
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

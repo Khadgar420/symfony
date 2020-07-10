@@ -7,9 +7,12 @@ use App\Entity\Comment;
 use App\Form\ArticleType;
 use App\Form\CommentType;
 use App\Repository\ArticleRepository;
+use App\Repository\UserRepository;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 
+
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -26,9 +29,12 @@ class BlogController extends AbstractController
     {
         
         $articles = $repo->findAll();
+        $articleCount = $repo->getArticleCount();
+
         return $this->render('blog/index.html.twig', [
             'controller_name' => 'BlogController',
-            'articles' => $articles
+            'articles' => $articles,
+            'articleCount' => $articleCount
         ]);
     }
 
@@ -38,7 +44,7 @@ class BlogController extends AbstractController
     public function home(ArticleRepository $repo)
     {
         
-        $articles = $repo->findAll();
+        $articles = $repo->findLast5();
         return $this->render('blog/home.html.twig', [
             'controller_name' => 'BlogController',
             'articles' => $articles
@@ -119,9 +125,11 @@ class BlogController extends AbstractController
     /**
      * @Route ("/blog/{id}", name="blog_show")
      */
-    public function show(Article $article, Request $request, ObjectManager $manager)
+    public function show(Article $article, Request $request, ObjectManager $manager, UserInterface $user)
     {
         $comment = new Comment();
+
+        
 
         $form = $this->createForm(CommentType::class, $comment);
         
@@ -130,7 +138,8 @@ class BlogController extends AbstractController
         if($form->isSubmitted() && $form->isValid())
         {
             $comment->setCreatedAt(new \DateTime())
-                    ->setArticle($article);
+                    ->setArticle($article)
+                    ->setAuthor($user->getUsername());
             $manager->persist($comment);
             $manager->flush();
 
@@ -144,5 +153,14 @@ class BlogController extends AbstractController
             'article' => $article,
             'commentForm' => $form->createView()
         ]);
+    }
+
+    
+    /**
+     * @Route ("/privacy-statement", name="privacy-statement")
+     */
+    public function private()
+    {
+        return $this->render('blog/legal.html.twig');
     }
 }

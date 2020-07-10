@@ -3,156 +3,191 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Le Pad Pourpre{% endblock %}</title>
+        <meta name="description" content="Le Pad Pourpre, news sur le hardware et les jeux vidéo ! ">
+        
+        <meta name="copyright" content="© Le Pad Poupre 2020">
  
   
         {% block stylesheets %}
-         {{ encore_entry_link_tags('app') }}
-          {{ encore_entry_link_tags('test') }}
+         
           {{ encore_entry_link_tags('cookiesscss') }}
-       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet"> 
+          {{ encore_entry_link_tags('style') }}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       <link rel="icon" type="image/png" href="{{asset('build/images/favicon.png')}}" />
         {% endblock %}
-    </head>
-    <body>
-    
-  <nav class="navbar sticky-top navbar-dark " id="hidenav">
-  <a class="navbar-brand" id="hidenavtitle">Le Pad Pourpre</a>
-  <ul class="navbar-nav nul">
-          <li class="nav-item nul">
-            <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
-          </li>
-         
-         {% if is_granted('ROLE_ADMIN') %}
-          <li class="nav-item nul">
-            <a class="nav-link" href="/blog/new" >Créer un article</a>
-          </li>
-         
-          <li class="nav-item nul">
-            <a class="nav-link" href="/admin" >Interface d'administration</a>
-          </li>
-        {% endif %}
-       <li class="nav-item nul">
-      
-        
-        
-          <a class="nav-link" href="/blog">Tout les articles</a>
 
-          </li>
-          <li class="nav-item nul">
-          <a class="nav-link" href="/hardware">Catégorie Hardware</a>
-          </li>
-          <li class="nav-item nul">
-          <a class="nav-link" href="/gaming">Categorie Gaming</a>
-       
-        
-      </li>
-    </ul>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-    <li class="nav-item active">
-            <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
-          </li>
-         
-         {% if is_granted('ROLE_ADMIN') %}
-          <li class="nav-item">
-            <a class="nav-link" href="/blog/new" >Créer un article</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="/admin" >Interface d'administration</a>
-          </li>
-        {% endif %}
-       <li class="nav-item">
-    
-       
-          <a class="dropdown-item" href="/blog">Tout les articles</a>
-          <a class="dropdown-item" href="/hardware">Catégorie Hardware</a>
-       
-          <a class="dropdown-item" href="/gaming">Categorie Gaming</a>
-      
-      </li>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
-
-    
-   <div class="container" id="container1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    
+    </head>
 
-   {% if not app.user %}
+
+<body>
+    <div class="sidemenu">
+        <div class="nav-hide">&#9776;</div>
+        <a href="/" id="cdvslide"><img src="{{asset('build/images/logodusite.png')}}" id="avatarside" alt="imgcdv"></a>
+        <ul class="info-user-side">
+
+           
+
+            {% if not app.user %}
   
-   <a id="testusflask" href="/connexion">Se connecter</a>
+   
+            <li><a href="/connexion"> Se connecter</a></li>
 
    {% else %}
-    <a id="testusflask">Bonjour {{ app.user.username }}</a>
-    <a id="testusflask" href="/deconnexion">Se déconnecter</a>
 
-   {% endif %} 
-   
-    <img  id="logosite" alt="logosite" src="{{asset('build/images/logodusite.png')}}">
-    <h1 id="title"> Le Pad Pourpre</h1>
-<nav class="navbar navbar-expand-lg">
- 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
+    <li>Bonjour {{ app.user.username }}</li>
+            <li><a href="/deconnexion"> Se déconnecter</a></li>
+        </ul>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
-          </li>
-         
-         {% if is_granted('ROLE_ADMIN') %}
-          <li class="nav-item">
-            <a class="nav-link" href="/blog/new" >Créer un article</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin" >Interface d'administration</a>
-          </li>
-        {% endif %}
-       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Voir les articles
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/blog">Tout les articles</a>
-          <a class="dropdown-item" href="/hardware">Catégorie Hardware</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/gaming">Categorie Gaming</a>
-        </div>
-      </li>
-    </ul>
-   
-  </div>
-</nav>
-</div>
+       {% endif %} 
 
-<div class="container" id="container-content">
-        {% block body %}{% endblock %}
+        <ul class="list">
+            <li>
+                <a href="/">
+                    <h2>Accueil</h2>
+                </a>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <li>
+                <a href="/blog/new">
+                    <h2>Créer un article</h2> 
+                </a>
+            </li>
+            <li>
+                <a href="/admin">
+                    <h2>Administration</h2>
+                </a>
+            </li>
+
+            {% endif %}
+            <li>
+                <a href="/blog">
+                    <h2>Tout les articles</h2>
+                </a>
+            </li>
+            <li>
+                <a href="/gaming">
+                    <h2>Gaming</h2>
+                </a>
+            </li>
+            <li>
+                <a href="/hardware">
+                    <h2>Hardware</h2>
+                </a>
+            </li>
+        </ul>
+
 
     </div>
-    <div class="container" id="containerfooter">
 
-           <h1 id="titrefooter">#Le Pad Pourpre</h1>
-           
-           <a>Copyright</a>
-            
-</div>       
+    <div class="navbar">
+
+        <div class="title">
+            <div class="nav-toggle">&#9776;</div>
+            <a href="home"><img src="{{asset('build/images/logodusite.png')}}" id="sitelogo" alt="logo"></a>
+            <h1 id="webtitle">Le Pad Pourpre</h1>
+        </div>
+
+
+
+        <div class="userpart">
+            <a href="cdv"><img src="{{asset('build/images/logodusite.png')}}" id="avatar" alt="imgcdv"></a>
+            <li class="info-user">
+                    {% if not app.user %}
+  
+   
+            <ul><a href="/connexion"> Se connecter</a></ul>
+
+   {% else %}
+
+    <ul>Bonjour {{ app.user.username }}</ul>
+            <ul><a href="/deconnexion"> Se déconnecter</a></ul>
+        </ul>
+            </li>
+            </li>
+
+      {% endif %}      
+        </div>
+
+
+
+    </div>
+
+    
+
+    
+       
+{% block body %}
+
+{% endblock %}
+
+    
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="chiant">
+                <div class="col-sm-12 col-md-6">
+                    <h6>A propos</h6>
+                    <li><a href="mentions">Mentions légales</a></li>
+                    <li><a href="Condition">Conditions d'utilisation</a></li>
+                    <li><a href="Pol">Politiques de confidentialité</a></li>
+
+                </div>
+
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Liens rapides</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">Nous contacter</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="chiant">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                        <a href="#">LePadPourpre</a>.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    
+
+
+
+</html>
+
+
         {% block javascripts %}
        
-        {{ encore_entry_script_tags('main') }}
+        
         {{ encore_entry_script_tags('cookies') }}
-       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        {{ encore_entry_script_tags('anim0') }}
+        {{ encore_entry_script_tags('anim1') }}
+
+        
+       
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
-        {% endblock %}
+        
+{% endblock %}
+
 
         
     </body>

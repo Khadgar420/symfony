@@ -12,6 +12,16 @@
     color: red;
 }
 
+@font-face {
+    font-family: "Oswald";
+    src: url(../images/Oswald.ttf);
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: url(../images/PermanentMarker.ttf);
+}
+
 #logosite {
     width: 100px;
     height: 100px;
@@ -81,7 +91,7 @@ article {
 }
 
 body {
-    background-image: url(../images/fond.png);
+    background-image: url(../images/fond.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

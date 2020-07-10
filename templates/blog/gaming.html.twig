@@ -8,46 +8,88 @@
 
 
    
- 
+
+  
+
+  <div class="container-md">
+
+
+
+        <div class="articleshow row">
+        <div class="col-12">
+            <div class="allarticle">
+               Gaming
+            </div>
+
+         </div>   
+            <br>
+               {% for article in articles  %}
+
+              {% if article.category.title == 'Gaming' %}
+  
     
-<div class="row">
-  <div class="col" id="col1">
+            <div class="col-3 article" style="background-image: url('{{article.image}}');" onclick="location.href='{{ path('blog_show', {'id': article.id}) }}'">
+            
+            
+                <div class="extrait">
+                    <p> {% set strategy = 'html' %}
 
- {%for article in articles %}
+                      {% autoescape 'html' %}
+                          
 
-{% if article.category.title == 'Gaming' %}
-    <article>
-      <h2>{{article.title}}</h2>
-      <div class="metadata">Ecrit le {{article.createdAt | date('d/m/Y')}} à {{article.createdAt | date('H:i')}}</div>
-      <div class="content">
-        <img src="{{article.image}}" alt="">
-        <br>
-       {% set strategy = 'html' %}
+                          {{ article.content|length > 50 ? article.content|slice(0, 80) ~ '...' : article.content  }}
+                      {% endautoescape %}</p>
 
-{% autoescape 'html' %}
-    {{ article.content|escape('html')}} 
-{% endautoescape %}
-        <br>
-        <br>
-        <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn btn-danger">Lire la suite</a>
-      </div>
-    </article>
+                </div>
+
+                
+              
+    </div>
+
     {% endif %}
     
 {% endfor %}
-</div>
- 
-  
+        </div>
 
-
-</div>
-
-
-
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        </div>
         
+       
+      
+    </div>
+
     
-  </div>
+
 
 
   
