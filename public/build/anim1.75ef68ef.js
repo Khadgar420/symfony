@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["anim1"],{G4P0:function(a,d,n){(function(a){a(document).ready((function(){a(".col-xl").addClass("load"),a(".articleshow").addClass("load"),a(".carousel").addClass("load"),a(".articlecontainer9").addClass("load")}))}).call(this,n("EVdn"))}},[["G4P0","runtime",0]]]);

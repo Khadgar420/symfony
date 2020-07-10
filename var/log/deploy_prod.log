@@ -1,0 +1,52 @@
+================================================================================
+Deployment started at Sun, 31 May 2020 14:04:31 +0000
+================================================================================
+
+===> Initializing configuration
+---> Processing the configuration options of the deployer class
+_symfonyEnvironmentEnvVarName : APP_ENV
+binDir                        : bin
+cacheDir                      : var/cache
+composerInstallFlags          : --no-dev --prefer-dist --no-interaction --quiet
+composerOptimizeFlags         : --optimize
+configDir                     : config
+consoleBinaryPath             : 
+controllersToRemove           : []
+deployDir                     : home/beab1214/public_html
+dumpAsseticAssets             : false
+installWebAssets              : true
+keepReleases                  : 5
+localProjectDir               : C:\Users\NZXT\Documents\Symfony\Symfony
+logDir                        : var/log
+permissionGroup               : 
+permissionMethod              : chmod
+permissionMode                : 0777
+permissionUser                : 
+remoteComposerBinaryPath      : /usr/local/bin/composer
+remotePhpBinaryPath           : php
+repositoryBranch              : master
+repositoryUrl                 : git@github.com:Khadgar420/symfony.git
+resetOpCacheFor               : 
+servers                       : beab1214@aiguillette.o2switch.net
+sharedDirs                    : ["var/log"]
+sharedFiles                   : []
+srcDir                        : src
+symfonyEnvironment            : prod
+templatesDir                  : templates
+updateRemoteComposerBinary    : false
+useSshAgentForwarding         : true
+warmupCache                   : true
+webDir                        : public
+writableDirs                  : ["var/cache/","var/log/"]
+---> Checking technical requirements
+[localhost] Executing command: "cd C:\Users\NZXT\Documents\Symfony\Symfony && where git"
+| out :: C:\Program Files\Git\cmd\git.exe
+[OK] "git" command exists
+[localhost] Executing command: "cd C:\Users\NZXT\Documents\Symfony\Symfony && where ssh"
+| out :: C:\Windows\System32\OpenSSH\ssh.exe
+[OK] "ssh" command exists
+[beab1214@aiguillette.o2switch.net] Executing command: "echo 1810625156"
+| out :: 1810625156
+[OK] The server allows to login via SSH from the local machine
+[beab1214@aiguillette.o2switch.net] Executing command: "where /usr/local/bin/composer"
+| err :: bash: where: command not found
