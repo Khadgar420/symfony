@@ -332,22 +332,6 @@ a:hover {
     margin: 0
 }
 
-@media (max-width:991px) {
-    .site-footer [class^=col-] {
-        margin-bottom: 30px
-    }
-}
-
-@media (max-width:767px) {
-    .site-footer {
-        padding-bottom: 0
-    }
-    .site-footer .copyright-text,
-    .site-footer .social-icons {
-        text-align: center
-    }
-}
-
 .container-md {
     background-color: #1f1f1f;
 }
@@ -378,6 +362,7 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1140px;
+    margin: auto;
 }
 
 .chiant {
@@ -519,6 +504,10 @@ a#connexion:hover {
     text-decoration: none;
 }
 
+.legal p {
+    color: white;
+}
+
 @media (min-width:1910px) {
     .col-xl img {
         width: 1000px;
@@ -562,6 +551,17 @@ a#connexion:hover {
     .userpart {
         display: none;
     }
+    .article {
+        max-width: 60%;
+    }
+    .articleshow.load {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    }
+    .col-3 {
+        max-width: 70vw !important;
+    }
 }
 
 @media (max-width: 1680px) {
@@ -581,5 +581,37 @@ a#connexion:hover {
     }
     .site-footer {
         width: 98.8vw;
+    }
+}
+
+@media (max-width:991px) {
+    .site-footer [class^=col-] {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width:767px) {
+    .site-footer {
+        padding-bottom: 0
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center
+    }
+}
+
+@media(min-width: 992px) {
+    .articleshow.load {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+    }
+}
+
+@media(min-width: 768px) {
+    .articleshow.load {
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
     }
 }

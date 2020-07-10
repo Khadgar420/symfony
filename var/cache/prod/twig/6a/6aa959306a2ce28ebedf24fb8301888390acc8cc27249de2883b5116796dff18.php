@@ -49,10 +49,6 @@ class __TwigTemplate_64a1f5280a55b147915fe2606eb777f29efeeac3599e95f74fc2c4520af
         // line 6
         echo "
 
-";
-        // line 8
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragmentStrategy("esi", $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ch_cookie_consent.show_if_cookie_consent_not_set"));
-        echo "
 
  
     
@@ -66,19 +62,19 @@ class __TwigTemplate_64a1f5280a55b147915fe2606eb777f29efeeac3599e95f74fc2c4520af
         <div class=\"carousel-inner\">
             <div class=\"carousel-item active\">
                 <img src=\"";
-        // line 21
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/carouselpadpourpre.jpg"), "html", null, true);
         echo "\" alt=\"...\">
             </div>
             <div class=\"carousel-item\">
                 <img src=\"";
-        // line 24
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/carouselhardware.jpg"), "html", null, true);
         echo "\" alt=\"...\">
             </div>
             <div class=\"carousel-item\">
                 <img src=\"";
-        // line 27
+        // line 26
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/lepadpourpregaminghardware.jpg"), "html", null, true);
         echo "\" alt=\"...\">
             </div>
@@ -104,38 +100,38 @@ class __TwigTemplate_64a1f5280a55b147915fe2606eb777f29efeeac3599e95f74fc2c4520af
 
     
                 ";
-        // line 50
+        // line 49
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["articles"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 51
+            // line 50
             echo "   
   
     
             <div class=\"col-sm article\" style=\"background-image: url('";
-            // line 54
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "image", [], "any", false, false, false, 54), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "image", [], "any", false, false, false, 53), "html", null, true);
             echo "');\" onclick=\"location.href='";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 54)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 53)]), "html", null, true);
             echo "'\">
             
             
                 <div class=\"extrait\">
                     <p> ";
-            // line 58
+            // line 57
             $context["strategy"] = "html";
-            // line 59
+            // line 58
             echo "
                       ";
-            // line 61
+            // line 60
             echo "                          
 
                           ";
-            // line 63
-            echo twig_escape_filter($this->env, ((1 === twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 63)), 50)) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 63), 0, 80) . "...")) : (twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 63))), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, ((1 === twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 62)), 50)) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 62), 0, 80) . "...")) : (twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 62))), "html", null, true);
             echo "
                       ";
-            // line 64
+            // line 63
             echo "</p>
 
                 </div>
@@ -149,7 +145,7 @@ class __TwigTemplate_64a1f5280a55b147915fe2606eb777f29efeeac3599e95f74fc2c4520af
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 73
+        // line 72
         echo "           
             
         
@@ -173,7 +169,7 @@ class __TwigTemplate_64a1f5280a55b147915fe2606eb777f29efeeac3599e95f74fc2c4520af
 
     public function getDebugInfo()
     {
-        return array (  153 => 73,  139 => 64,  135 => 63,  131 => 61,  128 => 59,  126 => 58,  117 => 54,  112 => 51,  108 => 50,  82 => 27,  76 => 24,  70 => 21,  54 => 8,  50 => 6,  46 => 5,  35 => 1,);
+        return array (  149 => 72,  135 => 63,  131 => 62,  127 => 60,  124 => 58,  122 => 57,  113 => 53,  108 => 50,  104 => 49,  78 => 26,  72 => 23,  66 => 20,  50 => 6,  46 => 5,  35 => 1,);
     }
 
     public function getSourceContext()

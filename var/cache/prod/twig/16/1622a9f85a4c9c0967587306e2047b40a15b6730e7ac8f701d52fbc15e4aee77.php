@@ -208,9 +208,9 @@ class __TwigTemplate_4d4cff8725616e98e37895c603f2b86a313902cbf15adc3dad0454c8986
             <div class=\"chiant\">
                 <div class=\"col-sm-12 col-md-6\">
                     <h6>A propos</h6>
-                    <li><a href=\"mentions\">Mentions légales</a></li>
-                    <li><a href=\"Condition\">Conditions d'utilisation</a></li>
-                    <li><a href=\"Pol\">Politiques de confidentialité</a></li>
+                    <li><a href=\"/privacy-statement\">Mentions légales</a></li>
+                    <li><a href=\"/privacy-statement\">Conditions d'utilisation</a></li>
+                    <li><a href=\"/privacy-statement\">Politiques de confidentialité</a></li>
 
                 </div>
 
@@ -219,7 +219,7 @@ class __TwigTemplate_4d4cff8725616e98e37895c603f2b86a313902cbf15adc3dad0454c8986
                 <div class=\"col-xs-6 col-md-3\">
                     <h6>Liens rapides</h6>
                     <ul class=\"footer-links\">
-                        <li><a href=\"http://scanfcode.com/about/\">Nous contacter</a></li>
+                        <li><a href=\"/privacy-statement\">Nous contacter</a></li>
 
                     </ul>
                 </div>
@@ -230,7 +230,7 @@ class __TwigTemplate_4d4cff8725616e98e37895c603f2b86a313902cbf15adc3dad0454c8986
             <div class=\"chiant\">
                 <div class=\"col-md-8 col-sm-6 col-xs-12\">
                     <p class=\"copyright-text\">Copyright &copy; 2020 All Rights Reserved by
-                        <a href=\"#\">LePadPourpre</a>.
+                        <a href=\"/\">LePadPourpre</a>.
                     </p>
                 </div>
 

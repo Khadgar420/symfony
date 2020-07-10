@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelProdContainer::class, false)) {
 
 return new \Container0abpso4\srcApp_KernelProdContainer([
     'container.build_hash' => '0abpso4',
-    'container.build_id' => '8249be23',
-    'container.build_time' => 1594403319,
+    'container.build_id' => '292dd0b0',
+    'container.build_time' => 1594405721,
 ], __DIR__.\DIRECTORY_SEPARATOR.'Container0abpso4');
