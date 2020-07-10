@@ -12,7 +12,7 @@ use Doctrine\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 
 
-use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -126,21 +126,27 @@ class BlogController extends AbstractController
     /**
      * @Route ("/blog/{id}", name="blog_show")
      */
-    public function show(Article $article, Request $request, ObjectManager $manager,UserInterface $user)
+    public function show(Article $article, Request $request, ObjectManager $manager,TokenStorageInterface $tokenStorage)
     {
         $comment = new Comment();
 
-        
+        $user = $tokenStorage->getToken() ? $tokenStorage->getToken()->getUsername() : null;
 
         $form = $this->createForm(CommentType::class, $comment);
         
         $form->handleRequest($request);
+        
+
+        
+        
 
         if($form->isSubmitted() && $form->isValid())
         {
+
+            
             $comment->setCreatedAt(new \DateTime())
                     ->setArticle($article)
-                    ->setAuthor($user->getUsername());
+                    ->setAuthor($user);
             $manager->persist($comment);
             $manager->flush();
 
@@ -149,6 +155,7 @@ class BlogController extends AbstractController
             ]);
 
         }
+    
     
         return $this->render('blog/show.html.twig', [
             'article' => $article,

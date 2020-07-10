@@ -184,7 +184,7 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
             echo "            </div>
             <br>
         <br>
-        </div>
+        
         
   
 
@@ -195,23 +195,27 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 80
         echo "
+   
+  
+
+
     ";
-        // line 81
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 81, $this->source); })()), "user", [], "any", false, false, false, 81)) {
-            // line 82
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 82, $this->source); })()), 'form_start');
+        // line 85
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "user", [], "any", false, false, false, 85)) {
+            // line 86
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 86, $this->source); })()), 'form_start');
             echo "
 
 
 <div class=\"col-6 form\">";
-            // line 85
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 85, $this->source); })()), "content", [], "any", false, false, false, 85), 'row', ["attr" => ["placeholder" => "Restez courtois"]]);
+            // line 89
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 89, $this->source); })()), "content", [], "any", false, false, false, 89), 'row', ["attr" => ["placeholder" => "Restez courtois"]]);
             echo "</div>
 <div class=\"col-6 form\"><button type=\"submit\" class=\"btn btn-success\">Commenter</button></div>
 
 ";
-            // line 88
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 88, $this->source); })()), 'form_end');
+            // line 92
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["commentForm"]) || array_key_exists("commentForm", $context) ? $context["commentForm"] : (function () { throw new RuntimeError('Variable "commentForm" does not exist.', 92, $this->source); })()), 'form_end');
             echo "
 <br>
 <br>
@@ -219,22 +223,19 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
 
 <br>
 ";
         } else {
-            // line 102
+            // line 103
             echo "<h2 id=\"comcon\">Connectez vous pour commenter ! </h2>
 <br>
 <br>
 <br>
 <div class=\"col-6 form\">
 <a href=\"";
-            // line 107
+            // line 108
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
             echo "\" class=\"btn btn-primary\">Connectez vous</a>
 </div>
@@ -246,23 +247,26 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 ";
         }
-        // line 125
+        // line 121
         echo "
+
   </div>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-
-        
-    
+    </div>
 
 
 
@@ -288,7 +292,7 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
 
     public function getDebugInfo()
     {
-        return array (  259 => 125,  238 => 107,  231 => 102,  214 => 88,  208 => 85,  202 => 82,  200 => 81,  197 => 80,  184 => 72,  176 => 66,  170 => 62,  167 => 60,  165 => 59,  157 => 56,  148 => 52,  142 => 49,  137 => 46,  131 => 44,  129 => 43,  117 => 39,  109 => 33,  105 => 31,  102 => 29,  100 => 28,  92 => 23,  82 => 16,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  255 => 121,  239 => 108,  232 => 103,  218 => 92,  212 => 89,  206 => 86,  204 => 85,  197 => 80,  184 => 72,  176 => 66,  170 => 62,  167 => 60,  165 => 59,  157 => 56,  148 => 52,  142 => 49,  137 => 46,  131 => 44,  129 => 43,  117 => 39,  109 => 33,  105 => 31,  102 => 29,  100 => 28,  92 => 23,  82 => 16,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -367,11 +371,15 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
             </div>
             <br>
         <br>
-        </div>
+        
         
   
 
     {% endfor %}
+
+   
+  
+
 
     {% if app.user %}
 {{form_start(commentForm)}}
@@ -387,10 +395,7 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
 
 <br>
 {% else %}
@@ -409,21 +414,24 @@ class __TwigTemplate_a252cc871efaeb8dc41a6662ba048d067b50c080dcc29fd1487fd0543f1
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 {% endif %}
 
+
   </div>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-
-        
-    
+    </div>
 
 
 

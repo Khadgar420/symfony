@@ -5885,12 +5885,12 @@
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.YRD_GE9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ISccxt_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="article" type="service" id=".errored..service_locator.YRD_GE9.App\Entity\Article"/>
+        <argument key="article" type="service" id=".errored..service_locator.ISccxt_.App\Entity\Article"/>
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
-        <argument key="user" type="service" id=".errored..service_locator.YRD_GE9.Symfony\Component\Security\Core\User\UserInterface"/>
+        <argument key="tokenStorage" type="service" id="security.token_storage"/>
       </argument>
     </service>
     <service id=".service_locator.hN3u590" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5900,7 +5900,7 @@
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.AjB59yD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.yXADWT7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BlogController::create" type="service" id=".service_locator.dGsVFkh"/>
@@ -5908,14 +5908,14 @@
         <argument key="App\Controller\BlogController::hardware" type="service" id=".service_locator.U8P1R68"/>
         <argument key="App\Controller\BlogController::home" type="service" id=".service_locator.U8P1R68"/>
         <argument key="App\Controller\BlogController::index" type="service" id=".service_locator.U8P1R68"/>
-        <argument key="App\Controller\BlogController::show" type="service" id=".service_locator.YRD_GE9"/>
+        <argument key="App\Controller\BlogController::show" type="service" id=".service_locator.ISccxt_"/>
         <argument key="App\Controller\SecurityController::registration" type="service" id=".service_locator.hN3u590"/>
         <argument key="App\Controller\BlogController:create" type="service" id=".service_locator.dGsVFkh"/>
         <argument key="App\Controller\BlogController:gaming" type="service" id=".service_locator.U8P1R68"/>
         <argument key="App\Controller\BlogController:hardware" type="service" id=".service_locator.U8P1R68"/>
         <argument key="App\Controller\BlogController:home" type="service" id=".service_locator.U8P1R68"/>
         <argument key="App\Controller\BlogController:index" type="service" id=".service_locator.U8P1R68"/>
-        <argument key="App\Controller\BlogController:show" type="service" id=".service_locator.YRD_GE9"/>
+        <argument key="App\Controller\BlogController:show" type="service" id=".service_locator.ISccxt_"/>
         <argument key="App\Controller\SecurityController:registration" type="service" id=".service_locator.hN3u590"/>
       </argument>
     </service>
@@ -6391,12 +6391,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.AjB59yD"/>
+      <argument type="service" id=".service_locator.yXADWT7"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.AjB59yD"/>
+      <argument type="service" id=".service_locator.yXADWT7"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6406,8 +6406,7 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
-    <service id=".errored..service_locator.YRD_GE9.App\Entity\Article" class="App\Entity\Article"/>
-    <service id=".errored..service_locator.YRD_GE9.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface"/>
+    <service id=".errored..service_locator.ISccxt_.App\Entity\Article" class="App\Entity\Article"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.XH6G_3Z"/>
       <argument type="collection">
@@ -6814,7 +6813,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Form\Filter\FilterRegistry" alias="easyadmin.filter.registry" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.AjB59yD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yXADWT7"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
