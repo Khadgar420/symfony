@@ -1,0 +1,77 @@
+<?php //%255B5f765ad2fae946c24e9650e3292e9935%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.title AS title_1, a0_.content AS content_2, a0_.image AS image_3, a0_.created_at AS created_at_4, a0_.category_id AS category_id_5 FROM article a0_ ORDER BY a0_.id DESC LIMIT 5',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'a' => 'App\\Entity\\Article',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'content_2' => 'content',
+                    'image_3' => 'image',
+                    'created_at_4' => 'createdAt',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'category_id_5' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'a' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'category_id_5' => 'category_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'a',
+                    'title_1' => 'a',
+                    'content_2' => 'a',
+                    'image_3' => 'a',
+                    'created_at_4' => 'a',
+                    'category_id_5' => 'a',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Article',
+                    'title_1' => 'App\\Entity\\Article',
+                    'content_2' => 'App\\Entity\\Article',
+                    'image_3' => 'App\\Entity\\Article',
+                    'created_at_4' => 'App\\Entity\\Article',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
