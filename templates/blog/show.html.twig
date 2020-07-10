@@ -84,13 +84,43 @@
 
 <div class="col-6 form">{{form_row(commentForm.content,{ 'attr': {'placeholder':'Restez courtois'}})}}</div>
 <div class="col-6 form"><button type="submit" class="btn btn-success">Commenter</button></div>
-<br>
-<br>
-<br>
+
 {{form_end(commentForm)}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
 {% else %}
 <h2 id="comcon">Connectez vous pour commenter ! </h2>
+<br>
+<br>
+<br>
+<div class="col-6 form">
 <a href="{{path('security_login')}}" class="btn btn-primary">Connectez vous</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endif %}
 
   </div>

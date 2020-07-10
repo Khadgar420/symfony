@@ -20,6 +20,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class BlogController extends AbstractController
 {
     /**
@@ -125,7 +126,7 @@ class BlogController extends AbstractController
     /**
      * @Route ("/blog/{id}", name="blog_show")
      */
-    public function show(Article $article, Request $request, ObjectManager $manager, UserInterface $user)
+    public function show(Article $article, Request $request, ObjectManager $manager,UserInterface $user)
     {
         $comment = new Comment();
 
