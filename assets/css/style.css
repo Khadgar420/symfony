@@ -253,27 +253,25 @@ a:hover {
     height: 60vh;
 }
 
-.site-footer {
+.footer {
     background-color: #002a38;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
     color: whitesmoke;
     z-index: 9999;
-    position: absolute;
-    width: 99.28vw;
 }
 
-.site-footer hr {
+.footer hr {
     border-top-color: #bbb;
     opacity: 0.5
 }
 
-.site-footer hr.small {
+.footer hr.small {
     margin: 20px 0
 }
 
-.site-footer h6 {
+.footer h6 {
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
@@ -281,11 +279,11 @@ a:hover {
     letter-spacing: 2px
 }
 
-.site-footer a {
+.footer a {
     color: whitesmoke;
 }
 
-.site-footer a:hover {
+.footer a:hover {
     color: red;
     text-decoration: none;
 }
@@ -318,7 +316,7 @@ a:hover {
     text-align: right
 }
 
-.site-footer .social-icons a {
+.footer .social-icons a {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -329,7 +327,7 @@ a:hover {
 }
 
 .copyright-text {
-    margin: 0
+    margin: 0;
 }
 
 .container-md {
@@ -365,7 +363,7 @@ a:hover {
     margin: auto;
 }
 
-.chiant {
+.cp {
     display: flex;
     flex-direction: row;
 }
