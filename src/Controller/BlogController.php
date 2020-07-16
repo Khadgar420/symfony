@@ -19,6 +19,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Contracts\Cache\CacheInterface;
 
 
 class BlogController extends AbstractController
@@ -32,6 +33,7 @@ class BlogController extends AbstractController
         $articles = $repo->findAll();
         $articleCount = $repo->getArticleCount();
 
+        
         return $this->render('blog/index.html.twig', [
             'controller_name' => 'BlogController',
             'articles' => $articles,
@@ -42,10 +44,12 @@ class BlogController extends AbstractController
     /**
      * @Route ("/", name="home")
      */
-    public function home(ArticleRepository $repo)
+    public function home(ArticleRepository $repo, CacheInterface $cache)
     {
-        
         $articles = $repo->findLast5();
+        
+
+      
         return $this->render('blog/home.html.twig', [
             'controller_name' => 'BlogController',
             'articles' => $articles

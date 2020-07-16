@@ -25,9 +25,14 @@ class ArticleRepository extends ServiceEntityRepository
         $queryBuilder = $this->createQueryBuilder("a")
             ->orderBy("a.id","desc")
             ->setMaxResults(5)
+            ->getQuery()
+            ->useQueryCache(true)
+            ->useResultCache(true, 600, 'home_cache');
         ;
-        return $queryBuilder->getQuery()->getResult();    
+        return $queryBuilder->getResult();       
     }
+
+    
 
     public function getArticleCount(){
 
